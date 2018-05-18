@@ -1,6 +1,6 @@
 #Django 教程
 
-**环境安装**
+*  **环境安装**
 
 下载包 [Django-1.10.8.tar.gz](https://pypi.org/project/Django/1.10.8/#files) 
 
@@ -14,7 +14,7 @@
 ````
 
 
-**创建web项目**
+* **创建web项目**
 
 ````
 新建项目的父级目录  mkdir django_web
