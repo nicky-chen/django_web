@@ -1,9 +1,10 @@
 #Django 教程
 
-###环境安装
-````
+**环境安装**
+
 下载包 [Django-1.10.8.tar.gz](https://pypi.org/project/Django/1.10.8/#files) 
 
+````
 解压并进入目录，命令行 python setup.py install 安装
 
 检查是否安装成功 命令行 python ->  import django -> django.VERSION
@@ -13,7 +14,7 @@
 ````
 
 
-###创建web项目
+**创建web项目**
 
 ````
 新建项目的父级目录  mkdir django_web
