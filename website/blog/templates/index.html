@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!--页面公有样式-->
+    <link type="text/css" rel="stylesheet" th:href="@{/css/common_nobanner.css}" />
+    <!--页面独有样式-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/register.css}" />
+    <script th:src="@{/js/tools/jquery-3.2.1.min.js}"></script>
+    <script th:src="@{/js/tools/jquery.cookie.js}"></script>
+    <script th:src="@{/js/register/reg_inti.js}"></script>
+    <script th:src="@{/js/register/reg_mangament.js}"></script>
+
+    <title>用户注册</title>
+</head>
+
+<body>
+
+    <div class="mun">
+        <div class='logo'>
+            <a href="#"><img th:src="@{/images/logo.png}" /></a>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="main">
+            <div class="main-con">
+                <div class="main-left">
+                    <div class="left-tab">
+                        <form th:action="@{/display/toOrgRegister}" th:method="post">
+                            <table class="tab-reg">
+                                <tr>
+                                    <td class="td-title"></td>
+                                    <td class="td-input">
+                                        <input type="button" class="reg-person" id='reg_person' value="个人注册" />
+                                        <input type="button" class="reg-company" id='reg_com' value="企业注册" />
+                                    </td>
+                                </tr>
+                                <tr id='org_name'>
+                                    <td class="td-title">机构名称</td>
+                                    <td class="td-input">
+                                        <input type="text" class='input-text' name="orgName"  id='reg_org_name' placeholder="请输入机构名称" />
+                                    </td>
+                                </tr>
+                                <tr id='mge_name'>
+                                    <td class="td-title">管理员用户名</td>
+                                    <td class="td-input">
+                                        <input type="text" class='input-text' name="username"  id='org_username' placeholder="请输入用户名" />
+                                    </td>
+                                </tr>
+                                <tr id='per_name'>
+                                    <td class="td-title">用户名</td>
+                                    <td class="td-input">
+                                        <input type="text" class='input-text' name="username"  id='username' placeholder="请输入用户名" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">邮箱</td>
+                                    <td class="td-input">
+                                        <input type="text" class='input-text' name="regMail" id="user_mail" placeholder="请在这里输入邮箱地址" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">密　码</td>
+                                    <td class="td-input">
+                                        <input type="password" class='input-text' name="pwd" id='user_pwd' placeholder="请在这里输入用户名" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title">验证码</td>
+                                    <td class="td-input">
+                                      <input type="text" class='input-texts' id='check_code' name="identifyCode" placeholder="请在这里输入验证码"  style="display:inline-block"/> <img class= "img-text" alt="验证码" onclick = "this.src='/display/verificationCode?d='+new Date()*1" th:src="@{/display/verificationCode}" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td-title"></td>
+                                    <td class="td-input" id="td_input">
+                                        <input type="button"  id='submit_reg' value='注册' class="submit-reg" />
+                                        <input type="button"  id='submit-reg' value='注册' class="submit-reg" style="display: none"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td >      </td>
+                                    <td id='usr_dis'>已有账号？<a class='a-login' th:href="@{index}">直接登陆</a> </td>
+
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="main-right">
+                    <div class="rqcode">
+                        <img th:src="@{/images/rqcode.png}" alt="" />
+                        <p>扫一扫注册</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+
+            <div class='foot-con'>
+
+                <div class='friend-link'>
+
+                    <div class='friend-link-bg'></div>
+
+                    <div class="friend-link-selet">
+                        <select>
+                                <option>123123</option>
+                            <option>123123</option>
+                                <option>123123</option>
+                                <option>123123</option>
+                            </select>
+                        <select>
+                                <option>123123</option>
+                            <option>123123</option>
+                                <option>123123</option>
+                                <option>123123</option>
+                            </select>
+
+                        <select>
+                                <option>123123</option>
+                            <option>123123</option>
+                                <option>123123</option>
+                                <option>123123</option>
+                            </select>
+                        <select>
+                                <option>123123</option>
+                            <option>123123</option>
+                                <option>123123</option>
+                                <option>123123</option>
+                            </select>
+                    </div>
+
+                </div>
+
+                <div class='site-info'>
+                    <p class='foot-nav'>
+                        <span>
+                                <a href="#">
+                                返回首页
+                                </a>
+                            </span>
+                        <span>
+                                <a href="#">
+                                隐私保护
+                                </a>
+                            </span>
+                        <span>
+                                <a href="#">
+                                网站介绍
+                                </a>
+                            </span>
+                        <span>
+                                <a href="#">
+                                联系我们
+                                </a>
+                            </span>
+                        <span>
+                                <a href="#">
+                                投诉建议
+                                </a>
+                            </span>
+                    </p>
+                    <div class="copyright">
+                    </div>
+                    <p class='foot-police'>
+                        <img width="100px" th:src="@{/images/foot_police.png}" />
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="bg-foot">
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
